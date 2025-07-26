@@ -1,15 +1,12 @@
 import Link from 'next/link';
 
-const Header = () => {
-  return (
-    <header className="bg-blue-600 text-white p-4 shadow-md">
-      <nav className="flex space-x-4 justify-center">
-        <Link href="/home" className="hover:underline">Home</Link>
-        <Link href="/about" className="hover:underline">About</Link>
-        <Link href="/posts" className="hover:underline">Posts</Link>
-      </nav>
-    </header>
-  );
-};
+const Header = () => (
+  <header className="bg-blue-600 p-4 text-white flex justify-center gap-4">
+    <Link href="/home">Home</Link>
+    <Link href="/about">About</Link>
+    <Link href="/posts">Posts</Link>
+    <Link href="/users">Users</Link> {/* Add this line */}
+  </header>
+);
 
 export default Header;
